@@ -1,0 +1,360 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+@charset "UTF-8";
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: 'Microsoft YaHei', sans-serif;
+  background-color: #f5f5f5;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.red {
+  color: red;
+}
+.mm_header .back {
+  float: left;
+  font-size: 0.46666667rem;
+  margin-left: 0.26666667rem;
+  margin-top: 0.41333333rem;
+  color: #fff;
+}
+.mm_header .upload {
+  width: 0.90666667rem;
+  height: 0.90666667rem;
+  float: right;
+  background: url("../images/header_app.png") no-repeat center;
+  background-size: 0.90666667rem 0.90666667rem;
+  margin-right: 0.26666667rem;
+  margin-top: 0.18666667rem;
+}
+.mm_header .text {
+  overflow: hidden;
+  height: 100%;
+  line-height: 1.32rem;
+  text-align: center;
+  font-size: 0.4rem;
+  color: #fff;
+}
+.mm_datails {
+  width: 100%;
+  padding: 0 0.13333333rem;
+  background-color: #fff;
+}
+.mm_datails .product_content {
+  overflow: hidden;
+}
+.mm_datails .product_content h3 {
+  margin-top: 0.52rem;
+  font-size: 0.32rem;
+}
+.mm_datails .product_content .info {
+  margin-top: 0.52rem;
+  font-size: 0.32rem;
+}
+.mm_datails .product_content .data_info {
+  margin-top: 0.66666667rem;
+}
+.mm_datails .product_content .data_info img {
+  float: right;
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+}
+.mm_datails .product_content .data_info span {
+  line-height: 0.66666667rem;
+  font-size: 0.32rem;
+}
+.mm_datails .product_content .data_info p {
+  line-height: 0.66666667rem;
+  font-size: 0.24rem;
+  color: #000;
+}
+.mm_datails .product_content .big_img {
+  margin-bottom: 0.66666667rem;
+}
+.mm_datails .product_content .big_img img {
+  width: 6.66666667rem;
+  height: 6.66666667rem;
+}
+.mm_datails .tab-ul ul {
+  width: 3.65333333rem;
+  padding: 0.26666667rem 0.26666667rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 5px #CCC;
+}
+.mm_datails .tab-ul li {
+  height: 0.53333333rem;
+  border-bottom: 1px dashed #ccc;
+  line-height: 0.53333333rem;
+  font-size: 0.21333333rem;
+  padding: 0 0.13333333rem;
+}
+.mm_datails .tab-ul strong {
+  float: right;
+}
+.mm_datails .buy {
+  margin-top: 0.53333333rem;
+  padding: 0 0.6rem;
+}
+.mm_datails .buy a {
+  display: block;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  background-color: #ff9000;
+  border-radius: 0.06666667rem;
+  color: #fff;
+  font-size: 0.26666667rem;
+}
+.mm_datails .app_img {
+  margin-top: 0.66666667rem;
+}
+.mm_datails .commont {
+  margin-top: 0.45333333rem;
+}
+.mm_datails .commont .tit {
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  font-size: 0.32rem;
+  color: #000;
+}
+.mm_datails .commont .list .ui-border-b {
+  padding-left: 1.2rem;
+  position: relative;
+  height: 2.4rem;
+}
+.mm_datails .commont .list .userimg {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.mm_datails .commont .list .userimg img {
+  border-radius: 50%;
+}
+.mm_datails .commont .list .con {
+  padding-left: 0.13333333rem;
+  padding-top: 0.26666667rem;
+}
+.mm_datails .commont .list .con .username {
+  color: red;
+  font-size: 0.26666667rem;
+}
+.mm_datails .commont .list .con .content {
+  font-size: 0.26666667rem;
+}
+.mm_datails .commont .list .con .time {
+  float: right;
+  font-size: 0.26666667rem;
+}
+.mm_datails .commont textarea {
+  height: 1.96rem;
+}

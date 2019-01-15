@@ -1,0 +1,213 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+
+
+
+// <!-- 比价产品详情 -->
+.product_bijia{
+    background-color:#fff;
+    position: relative;
+    .product_title{
+       height:162/@base;
+       line-height: 47/@base;
+       text-align: center;
+       font-size:28/@base;
+       padding:50/@base 50/@base 0 50/@base;
+    }
+    .product_img{
+        height:340/@base;
+        img{
+            width:320/@base;
+            height:320/@base;
+            margin:0 auto;
+        }
+         
+    } 
+    .collect{
+        width:78/@base;
+        height:78/@base;
+        border-radius:50%;
+        background-color:#8cc900;
+        line-height: 78/@base;
+        text-align: center;
+        position: absolute;
+        right:30/@base;
+        bottom:30/@base;
+        font-size:20/@base;
+        color:#fff;
+    }
+}
+//   比价底部导航  
+.bijia-nav{
+    border-top:1px solid #c3580f;
+    border-bottom:1px solid #c3580f;
+    span{
+        float:left;
+        display: block;
+        width:33.33%;
+        height:64/@base;
+        line-height:64/@base;
+        text-align:center;
+        background-color:#ffc82f;
+        border-right:1px solid #c3580f;
+        font-size:24/@base;
+        &.current{
+            background-color:#ff9b19;
+        }
+
+    }
+
+}
+
+//  价格  
+.bijia-price{
+    height:90/@base;
+    .icon_left{
+        padding-left:65/@base;
+  
+        position: relative;
+        img{
+            width:35/@base;
+            height:35/@base;
+            position: absolute;
+            left:15/@base;
+            top:23/@base;
+            
+        }
+        span{
+            width:160/@base;
+            height:100%;
+            line-height: 80/@base;
+            font-size:24/@base;
+            
+        }
+       
+    }
+    .icon_right{
+        padding-right:130/@base;
+        position: relative;
+        
+        .buy{
+            width:106/@base;
+            height:48/@base;
+            line-height: 48/@base;
+            text-align: center;
+            background-color:red;
+            border-radius:5/@base;
+            position: absolute;
+            right:15/@base;
+            top:15/@base;
+            color:#fff;
+
+        }
+        span{
+
+            width:160/@base;
+            height:100%;
+            line-height: 80/@base;
+            font-size:24/@base;
+            color:red;
+        }
+    }
+
+  .price{
+      .red{
+
+          width:200/@base;
+      }
+      
+  }
+  .price .p_pic{
+      width:69/@base;
+      height:80/@base;
+      position: relative;
+      img{
+        width:35/@base;
+        height:35/@base;
+        width:35/@base;
+        height:35/@base;
+        position: absolute;
+        left:15/@base;
+        top:23/@base;
+      } 
+  }
+   .price  span{
+    width:106/@base;
+    height:48/@base;
+    line-height: 48/@base;
+    text-align: center;
+    background-color:red;
+    border-radius:5/@base;
+    
+  }
+      
+   
+
+}
+// 提示信息 
+.bijia-tips{
+    height:116/@base;
+    font-size:24/@base;
+    line-height: 38/@base;
+    border-top:1px solid #ccc;
+    border-bottom:3/@base solid #676767;
+    padding:20/@base 20/@base;
+    color:#808385;
+}
+// 评价 
+.bijia_commont{
+
+   .title{
+
+       height:66/@base;
+       background-color:#dbdbdb;
+       line-height: 66/@base;
+       text-align: center;
+       font-size:24/@base;
+       color:#000;
+   }
+   .content{
+       background-color:#fff;
+       li{
+           padding:20/@base 10/@base;
+           border-bottom:1px solid #ccc;
+
+           .p1,.p2,.p3{
+               font-size:14/@base;
+               color:#000;
+               line-height: 40/@base;
+           }
+           
+           
+       }
+       .more-commont{
+           padding:50/@base 10/@base;
+        
+           a{
+               display: block;
+               height:64/@base;
+               line-height: 64/@base;
+               text-align:center;
+               font-size:24/@base;
+               background-image:linear-gradient(to bottom,#fff,#666);
+               border-radius:5/@base;
+               color:#000;
+               cursor: pointer;
+           }
+       }
+   }
+}
+ 
+ 

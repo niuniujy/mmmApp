@@ -1,0 +1,163 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;   
+.mm_header{
+    background-color:#f4483e;
+    .back{
+        float:left;
+        font-size:35/@base;
+        margin-left:20/@base;
+        margin-top:31/@base;
+        color:#fff;
+     }
+     .upload{
+         width:68/@base;
+         height:68/@base;
+         float:right;
+         background:url("../images/header_app.png") no-repeat center;
+         background-size:68/@base 68/@base;
+         margin-right:20/@base;
+         margin-top:14/@base;
+         
+ 
+     }
+     .text{
+         overflow: hidden;
+         height:100%;
+         line-height:99/@base;
+         text-align:center;
+         font-size:30/@base;
+         color:#fff;
+     }
+     
+ }
+
+ 
+.mm_couponlist{
+    .title{
+        height:60/@base;
+        line-height: 60/@base;
+        text-align: center;
+        font-size:14/@base;
+    }
+    .list_content{
+       
+      
+        li{
+            height:260/@base;
+            border-bottom:1px solid #ccc;
+            background-color:#fff;
+            position: relative;
+            padding-left:240/@base;
+            padding-top:20/@base;
+            padding-right:20/@base;
+        }
+        .imgBox{
+            position: absolute;
+            height:100%;
+            left:0;
+            top:0;
+            padding:0 10/@base;
+            img{
+                margin-top:20/@base;
+                width:200/@base;
+                height:160/@base;
+              
+            }
+        }
+        .info{
+            width:100%;
+            height:100%;   
+        
+            .p1{
+                 line-height: 46/@base;
+                 font-size:20/@base;
+                 color:#000;
+            
+            }
+            .p2{
+                margin-top:20/@base;
+                font-size:20/@base;
+                color:red;
+                font-weight:700;
+            }
+            .p3{
+                margin-top:20/@base;
+                font-size:20/@base;
+                color:#f3a153;
+                 
+            }
+        }
+    }
+}
+// 模态框
+.modal{
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.5);
+    position: fixed;
+    top:0;
+    left:0;
+    display:none;
+
+    .modal_content{
+        width:400px;
+        height:400px;
+        margin:200px auto;
+        // background-color:orange;
+        position: relative;
+
+       .pic{
+           li{
+            width:200px;
+            height:160px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            /* margin-left:-100px;
+            margin-top:-80px; */
+            transform:translate(-50%,-50%);
+
+
+               img{
+                width:200/@base;
+                height:160/@base;
+              
+               }
+           }
+       }
+       .arrow{
+            .arrow_left,
+            .arrow_right{
+                display:block;
+                width:50px;
+                height:50px;
+                line-height: 50px;
+                text-align: center;
+                // background-color:skyblue;
+                position: absolute;
+                top:50%;
+                transform:translateY(-50%);
+                font-size:50px;
+                color:#fff;
+            }
+            .arrow_left{
+                left:0;
+            }
+             .arrow_right{
+                right:0;
+            }
+       }
+    }
+}

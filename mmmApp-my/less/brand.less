@@ -1,0 +1,188 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+// 公共的标题
+.title{
+    background-color:#f3f3f3;
+    height:76/@base;
+    line-height: 76/@base;
+    padding:0 20/@base;
+    font-size:20/@base;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    color:#7f3401;
+    font-weight:700;
+}
+.brand_good{
+   
+    .content{
+        li{
+            height:134/@base;
+            border:1px solid #ccc;
+            padding-left:60/@base;
+            padding-right:20/@base;
+            padding-top:20/@base;
+            position: relative;
+            background-color:#fff;
+
+            .img_box{
+               width:40/@base;
+               height:40/@base;
+               background-color:#c9c9c9;
+               line-height: 40/@base;
+               text-align: center;
+               
+               position: absolute;
+               left:20/@base;
+               top:20/@base;                
+            }
+            .info{
+                margin-left:20/@base;
+               
+                .text{
+                  font-size:24/@base;
+                  color:#000;
+                }
+                .num{
+                    font-size:18/@base;
+                    margin-top:22/@base;
+                }
+            }
+            .icon{
+                margin-top:-55/@base;
+                float: right;
+                font-size:50/@base;
+               
+                color: #82888f;
+            }
+        }
+    }
+}
+.brand_num{
+    
+     
+    .list_content{
+     
+      
+        li{
+            height:240/@base;
+            border-bottom:1px solid #ccc;
+            background-color:#fff;
+            position: relative;
+            padding-left:250/@base;
+        }
+        .imgBox{
+            position: absolute;
+            height:100%;
+            left:20/@base;
+            top:0;
+          
+            img{
+                width:210/@base;
+                height:170/@base;
+                margin-top:25/@base;
+            }
+        }
+        .info{
+            width:100%;
+            height:100%;   
+            padding:20/@base 20/@base;
+            
+
+            .p1{
+                 line-height: 40/@base;
+                 font-size:22/@base;
+                 color:#000;
+            
+            }
+            .p2{
+                margin-top:30/@base;
+                font-size:18/@base;
+                color:red;
+            }
+            .p3{
+                margin-top:30/@base;
+                font-size:16/@base;
+                color:#aaa9a8;
+                
+                 
+            }
+        }
+        
+    }
+}
+
+.brand_commont{
+    border-bottom:1px solid #ccc;
+    background-color:#fff;
+    padding-bottom:30/@base;
+    .list_content{
+     
+      
+        li{
+            border:none;
+            height:240/@base;
+            position: relative;
+            padding-left:250/@base;
+        }
+        .imgBox{
+            position: absolute;
+            height:100%;
+            left:20/@base;
+            top:0;
+          
+            img{
+                width:210/@base;
+                height:170/@base;
+                margin-top:25/@base;
+            }
+        }
+        .info{
+            width:100%;
+            height:100%;   
+            padding:20/@base 20/@base;
+            
+
+            .p1{
+                 line-height: 40/@base;
+                 font-size:22/@base;
+                 color:#000;
+            
+            }
+           
+        }
+        
+    }
+    .commont_info{
+      padding:0 20/@base;
+
+      .commont_inner{
+          padding:28/@base 20/@base;
+          background-color:#f8f8f8;
+
+          border:1px solid #ccc;
+
+          .p1{
+            font-size:16/@base;
+            color:#ac939f;
+          }
+          .p2{
+              line-height: 36/@base;
+              font-size:16/@base;
+              color:#000;
+          }
+      }
+    }
+}
+ 

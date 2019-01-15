@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <!-- 设置视口 -->
+   <meta name="viewport"
+   content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <script src="./lib/flexible/flexible.js"></script>
+    
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brandTitle.css">
+</head>
+<body>  
+    <div class="mm_container">  
+        <!-- 头部 -->
+        <div class="mm_header">
+           <a href="#" class="icon_left"></a>
+           <a href="#" class="icon_right"></a>  
+        </div>
+        <!-- 搜索 -->
+        <div class="mm_search clearfix">
+            <input type="text" class="fl" placeholder="请输入您想比价的商品">
+            <div class="fr search">搜索</div>
+        </div>
+        <div class="mm_productlist">
+            <div class="list_title">
+                <a href="index.html">首页></a>
+                <a href="category.html">全部分类></a>
+        
+            </div>     
+        </div>
+        <div class="hot_prand">
+            <div class="title">
+                <p>热门品牌排行</p>
+            </div>
+            <div class="prandlist">
+                <ul class="prand_ul">
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+        </div>
+     
+       
+        
+        <!-- 底部 -->
+        <div class="mm_footer">
+            <div class="footer_top mui-clearfix">
+                <a href="#">登录</a>
+                <a  href="#">注册</a>
+                <a  href="#" id="return"><i class="fa fa-arrow-circle-o-up"></i><span>返回顶部</span></a>
+            </div>
+            <div class="footer_bottom">
+                <p class="p1"><span class="red">手机APP下载</span>慢慢买手机版--掌上比价平台<span></span></p>
+                <p class="p2">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="prandTpl">
+
+        {{each result v i}}
+            <li>
+                <a href="#" data-id="{{v.brandTitleId}}" id="title"><span>{{v.brandTitle}}</span><i class="fa fa-chevron-down fr"></i></a>
+            </li>
+        {{/each}}
+    </script>
+   
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/brandTitle.js"></script>
+</body>
+</html>

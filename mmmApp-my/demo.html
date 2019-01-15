@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <style>
+        ul{
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
+            
+        .modal{
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0,.5);
+            position: fixed;
+            top:0;
+            left:0;
+        }
+        .modal_content{
+            width:400px;
+            height:400px;
+            margin:200px auto;
+            background-color:orange;
+            position: relative;
+        }
+        .modal_content .pic li{
+            width:200px;
+            height:160px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            /* margin-left:-100px;
+            margin-top:-80px; */
+            transform:translate(-50%,-50%);
+
+
+        }
+        .modal_content .pic li img{
+            width:200px;
+            height:160px;
+        }
+        .arrow_left,
+         .arrow_right{
+            display:block;
+            width:50px;
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+            background-color:skyblue;
+            position: absolute;
+            top:50%;
+            transform:translateY(-50%);
+            font-size:50px;
+            color:#fff;
+        }
+        .arrow_left{
+            left:0;
+        }
+         .arrow_right{
+            right:0;
+        }
+ 
+      
+    
+    </style>
+</head>
+<body>
+        <div class="modal">
+                <div class="modal_content">
+                    <ul class="pic">
+                        <li><a href="#"><img src="./images/item.gif" alt=""></a></li>
+                        <li><a href="#"><img src="./images/hua.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/sec01.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/sec02.jpg" alt=""></a></li>
+                    </ul>
+                    <div class="arrow">
+                        <a class="arrow_left ">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="arrow_right ">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+        
+                </div>
+        </div>
+        <script src="./lib/swiper/js/swiper.min.js"></script>
+        <script>
+           
+        
+        
+        </script>
+</body>
+</html>

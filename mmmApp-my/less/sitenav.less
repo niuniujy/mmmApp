@@ -1,0 +1,77 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+.mm_header{
+    background-color:#ff841d;
+    .back{
+        float:left;
+        font-size:35/@base;
+        margin-left:20/@base;
+        margin-top:31/@base;
+        color:#fff;
+     }
+     .upload{
+         width:68/@base;
+         height:68/@base;
+         float:right;
+         background:url("../images/header_app.png") no-repeat center;
+         background-size:68/@base 68/@base;
+         margin-right:20/@base;
+         margin-top:14/@base;
+         
+ 
+     }
+     .text{
+         overflow: hidden;
+         height:100%;
+         line-height:99/@base;
+         text-align:center;
+         font-size:30/@base;
+         color:#fff;
+     }
+     
+ }
+ .mm_nav_content{
+     width:100%;
+     background-color:#fff;
+     padding:20/@base;
+
+ }
+ .nav_content{
+     width:565/@base;
+     margin:0 auto;
+   
+     li{
+         height:88/@base;
+         float:left;
+         border:2px solid #ccc;
+         background-color:#f4f4f4;
+         margin-right:10/@base;
+         margin-bottom:20/@base;
+         padding:0 20/@base;
+
+         a{
+            display:block;
+            padding-top:25/@base;
+
+            img{
+                width:35/@base;
+                height:35/@base;
+                margin-right:10/@base;
+            }
+             
+         }
+     }
+     
+ }

@@ -1,0 +1,53 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+
+
+
+.mm_category{
+
+   ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+
+   }
+   .mui-collapse-content li{
+     float:left;
+     width:33.3%;
+     height:78/@base;
+     border-right:1px solid #ccc;
+     border-bottom:1px solid #ccc;
+     line-height: 78/@base;
+     text-align: center;
+   }
+   .mui-table-view-cell.mui-collapse .mui-collapse-content{
+      padding:0;
+   }
+   .mui-table-view-cell.mui-collapse .mui-collapse-content li  a{
+      font-size:16/@base;
+   }
+  .mui-content .mui-table-view .title{
+     display: block;
+     width: 100%;
+     height:79/@base;
+     line-height: 79/@base;
+     font-size:20/@base;
+     border-bottom:1px solid #ccc;
+     font-weight:700/@base;
+     background-color:#ededed;
+  }
+   
+
+}

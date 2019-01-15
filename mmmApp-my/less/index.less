@@ -1,0 +1,125 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+.mm_nav{
+    background-color:#fff;
+    margin-top:20/@base;
+    .nav-ul{
+        padding:25/@base 0;
+    }
+    li{
+        float:left;
+        width:25%;
+      
+        &:nth-last-child(-n+4){
+            display: none;
+        }
+        a{
+            display: block;
+            img{
+                width:102/@base;
+                height:102/@base;
+                margin:0 auto;
+            }
+            p{
+                text-align: center;
+                font-size:18/@base;
+                margin-top:10/@base;
+            }
+        }
+        
+       
+        
+    }
+}
+// 公共的标题
+.title_common{
+    width:100%;
+    height:68/@base;
+    background-color:#FF841D;
+    line-height: 68/@base;
+    padding:0 10/@base;
+    position: relative;
+    margin-top:20/@base;
+    span{
+        color:#fff;
+        font-size:24/@base;
+    }
+    img{
+        width:40/@base;
+        height:40/@base;
+        position: absolute;
+        right:10/@base;
+        top:14/@base;
+    }
+
+
+}
+//超值折扣推荐
+.color{
+    color:#FF841D;
+}
+.mm_sale{
+    background-color:#fff;
+    
+    li{
+        height:260/@base;   
+        border-bottom:1px solid #ccc;
+        padding-left:220/@base;
+        position: relative;
+        .imgBox{
+            position: absolute;
+            height:100%;
+            left:0;
+            top:0;
+            padding:0 10/@base;
+            img{
+                width:200/@base;
+                height:200/@base;
+                margin-top:25/@base;
+            }
+        }
+        .info{
+            width:100%;
+            height:100%;
+            padding:20/@base 20/@base;
+            
+
+            .p1{
+                 line-height: 40/@base;
+                 font-size:24/@base;
+                 color:#000;
+            
+            }
+            .p2{
+                margin-top:80/@base;
+                font-size:12/@base;
+            }
+        }
+    }
+    .content-more{
+        height:60/@base;
+        padding:0 20/@base;   
+        margin-top:10/@base;
+        a{
+            display:block;
+            border:1px solid #ccc;
+            line-height:60/@base;
+            text-align: center;
+            border-radius:5/@base;
+            font-size:22/@base;
+            background-color:#f8f8f8;
+        }
+    }
+}

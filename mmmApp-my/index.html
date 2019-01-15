@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <!-- 设置视口 -->
+   <meta name="viewport"
+   content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买首页</title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <!-- <link rel="stylesheet" href="./lib/mui/css/mui.min.css"> -->
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>    
+    <div class="mm_container">
+        <!-- 头部 -->
+        <div class="mm_header">
+           <a href="#" class="icon_left"></a>
+           <a href="#" class="icon_right"></a>  
+        </div>
+        <!-- 搜索 -->
+        <div class="mm_search clearfix">
+            <input type="text" class="fl" placeholder="请输入您想比价的商品">
+            <div class="fr search">搜索</div>
+        </div>
+        <!-- 导航 -->
+        <div class="mm_nav">
+            <ul class="clearfix nav-ul">
+               <!-- 挖个坑 -->
+                
+            </ul>
+        </div>
+        <!-- //超值折扣推荐 -->
+        <div class="mm_sale">
+             
+            <div class="title_common">
+                <span>超值折扣推荐</span>
+                <img src="./images/more.png" alt="">
+            </div>
+            
+            <div class="content">
+                <ul class="sale-ul">
+                     
+                  <!-- 挖个坑 -->
+                    
+                         
+                </ul>
+                <div class="content-more">
+
+                    <a href="moneyctrl.html">更多优惠信息>></a>
+                     
+                </div>
+            </div>
+        </div>
+        <!-- 品牌排行 -->
+        <div class="title_common">
+            <span>品牌排行</span>
+            <img src="./images/more.png" alt="">
+        </div>
+        <!-- 底部 -->
+        <div class="mm_footer">
+            <div class="footer_top clearfix">
+                <a href="#">登录</a>
+                <a  href="#">注册</a>
+                <a  href="#" id="return"><i class="fa fa-arrow-circle-o-up"></i><span>返回顶部</span></a>
+            </div>
+            <div class="footer_bottom">
+                <p class="p1"><span class="red">手机APP下载</span>慢慢买手机版--掌上比价平台<span></span></p>
+                <p class="p2">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="saleTpl">
+        {{each result v i}}
+        <li>
+                <a href="#" data-id="{{v.productId}}" id="sale">
+                    <div class="imgBox fl">{{@v.productImgSm}}</div>
+                    <div class="info">
+                        <p class="p1"><span>{{v.productName}}</span> <span class="color">{{v.productPinkage}}</span></p>
+                        <p class="p2"><span class="fl"><span> {{v.productFrom}}</span>| <span>{{v.productTime}}</span></span><span class="fr">{{v.productComCount}}</span></p>
+                    </div>
+                </a>
+        </li>
+       {{/each}}
+    </script>
+    <!-- 导航渲染 -->
+    <script type="text/html" id="navTpl">
+        {{each result v i}}
+        <li>
+            <a href={{v.titlehref}} data-id="{{v.indexmenuId}}">
+                {{@v.img}}
+                <p>{{v.name}}</p>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- <script src="./lib/mui/js/mui.js"></script> -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

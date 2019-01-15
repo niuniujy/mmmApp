@@ -1,0 +1,187 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+.mm_header{
+   
+    .back{
+        float:left;
+        font-size:35/@base;
+        margin-left:20/@base;
+        margin-top:31/@base;
+        color:#fff;
+     }
+     .upload{
+         width:68/@base;
+         height:68/@base;
+         float:right;
+         background:url("../images/header_app.png") no-repeat center;
+         background-size:68/@base 68/@base;
+         margin-right:20/@base;
+         margin-top:14/@base;
+         
+ 
+     }
+     .text{
+         overflow: hidden;
+         height:100%;
+         line-height:99/@base;
+         text-align:center;
+         font-size:30/@base;
+         color:#fff;
+     }
+     
+ }
+
+.mm_datails{
+    width:100%;
+
+    padding:0 10/@base;
+    background-color:#fff;
+
+    .product_content{
+       overflow: hidden;
+       h3{
+           margin-top:39/@base;
+           font-size:24/@base;
+       }
+       .info{
+           margin-top:39/@base;
+           font-size:24/@base;
+       }
+       .data_info{
+           margin-top:50/@base;
+           img{
+               float:right;
+               width:200/@base;
+               height:200/@base;
+           }
+           span{
+               line-height: 50/@base;
+               font-size:24/@base;
+           }
+           p{
+               line-height: 50/@base;
+               font-size:18/@base;
+               color:#000; 
+           }
+       }
+       .big_img{
+              
+           margin-bottom:50/@base;
+           img{
+             
+               width:500/@base; 
+               height:500/@base;    
+           }
+       }
+        
+    }
+   //  城市库存  
+    .tab-ul{
+        ul{
+
+            width:274/@base;
+            padding:20/@base 20/@base;
+            margin:0 auto;
+            box-shadow:   0px 0px 5px #CCC;
+        }
+        li{
+            height:40/@base;
+            border-bottom:1px dashed #ccc;
+            line-height: 40/@base;
+            font-size:16/@base;
+            padding:0 10/@base;
+
+        }
+        strong{
+            float:right;
+        }
+    }
+
+    //前往购买
+    .buy{
+        margin-top:40/@base;
+        padding:0 45/@base;
+
+        a{
+           display:block;
+           height:60/@base;
+           line-height: 60/@base;
+           text-align: center;
+           background-color:#ff9000;
+           border-radius:5/@base;
+           color:#fff;
+           font-size:20/@base;
+        }
+    }
+   //  二维码
+    .app_img{
+       margin-top:50/@base;
+    }
+
+    //评论
+    .commont{
+        margin-top:34/@base;
+        .tit{
+            height:88/@base;
+            line-height: 88/@base;
+            font-size:24/@base;
+            color:#000;
+            
+        }
+        .list{
+           .ui-border-b{
+               padding-left:90/@base;
+               position: relative;
+               height:180/@base;
+              
+           }
+           .userimg{
+               width:90/@base;
+               height:90/@base;
+               border-radius:50%;
+               position: absolute;
+               left:0;
+               top:0;
+               img{
+                   border-radius:50%;
+               }
+
+           }
+           .con{
+               padding-left:10/@base;
+               padding-top:20/@base;
+               
+               .username{
+                   color:red;
+                   font-size:20/@base;
+               }
+               .content{
+                   font-size:20/@base;
+               }
+               .time{
+                   float:right;
+                   font-size:20/@base;
+               }
+           }
+        }
+         
+        textarea{
+            height:147/@base;
+        }
+    }
+
+    
+
+}

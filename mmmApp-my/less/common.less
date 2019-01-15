@@ -1,0 +1,230 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+
+// 主色调:
+@color:#FF841D;
+p{
+    margin:0;
+    
+}
+.mm_container{
+    width:100%;
+    height:2000px;
+    min-width: 320px;
+    background-color:#f1f1f1;
+}
+//头部
+.mm_header{
+    height:99/@base;
+    background-color:#FF841D;
+    border-bottom:1px solid #ccc;
+    position: relative;
+   
+
+    .icon_left{
+        width:371/@base;
+        height:50/@base;
+        background:url("../images/header_logo.png") no-repeat center;
+        background-size:371/@base 50/@base;
+        position: absolute;
+        left:20/@base;
+        top:25/@base;
+    }
+    .icon_right{
+        width:68/@base;
+        height:68/@base;
+        background:url("../images/header_app.png") no-repeat center;
+        background-size:68/@base 68/@base;
+        position: absolute;
+        right:20/@base;
+        top:12/@base;
+    }
+}
+//搜索
+.mm_search{
+    padding:20/@base 20/@base;
+    background-color:#fff;
+   
+
+    input{
+        width:569/@base;
+        height:60/@base;
+        border-radius:30/@base;
+        font-size:16/@base;
+        background-color:#f1f1f1;
+        padding-left:15/@base;
+        border:1px solid #ccc;
+         
+    }
+    .search{
+      width:120/@base;
+      height:60/@base;
+      border-radius:30/@base;
+      background-color:#FF841D;
+      color:#fff;
+      font-size:20/@base;
+      text-align:center;
+      line-height: 60/@base;
+      
+    }
+     
+}
+
+// 底部
+.mm_footer{
+    background-color:#efefef;
+    .footer_top{
+        margin-top:50/@base;
+        height:66/@base;
+        border-top:1px solid #cacaca;
+        border-bottom:1px solid #cacaca;
+       a{
+           display:block;
+           width:33.3%;
+           height:100%;
+           float:left;
+           line-height: 66/@base;
+           text-align: center;
+           border-right:1px solid #cacaca;
+           font-size:24/@base;
+
+       }
+    }
+    .footer_bottom{
+        margin-top:20/@base;
+        text-align: center;
+         
+        .p1{
+            font-size:24/@base;
+            line-height: 40px;
+            .red{
+                color:red;
+                margin-right:10/@base;
+            }
+        }
+        .p2{
+            font-size:22/@base;
+            line-height: 40px;
+        }
+    }
+}
+
+// 抽取分页的公共类css
+
+.mm_pagelist{
+
+    span{
+        float: left;
+         
+        width:32.3%;
+        height:74/@base;
+      
+       
+      
+        a,select{
+            display:block;
+            width:163/@base;
+            height:44/@base;
+            
+            margin: 0 auto;
+            border-radius:5/@base;
+            
+        }
+        a{
+            background-color:#dddddd;
+            line-height:44/@base;
+            text-align: center;
+        }
+         
+    }
+ 
+}
+
+//产品列表页提取到公共样式
+.mm_productlist{
+    
+    .list_title{
+        height:75/@base;
+        line-height: 75/@base;
+        padding:0 20/@base;
+        background-image:linear-gradient(to bottom,#fff,#ccc);
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        position: relative;
+        font-size:20/@base;
+        
+
+        .check-list{
+           display: block;
+           width:125/@base;
+           height:50/@base;
+           line-height: 50/@base;
+           text-align: center;
+           border-radius:5/@base;
+           border:1px solid #ccc;
+           background-color:#e6e6e6;
+           position: absolute;
+           right:20/@base;
+           top:11/@base;
+        }
+
+    }
+    .list_content{
+     
+      
+        li{
+            height:235/@base;
+            border-bottom:1px solid #ccc;
+            background-color:#fff;
+            position: relative;
+            padding-left:200/@base;
+        }
+        .imgBox{
+            position: absolute;
+            height:100%;
+            left:0;
+            top:0;
+            padding:0 10/@base;
+            img{
+                width:200/@base;
+                height:200/@base;
+                margin-top:25/@base;
+            }
+        }
+        .info{
+            width:100%;
+            height:100%;   
+            padding:20/@base 20/@base;
+            
+
+            .p1{
+                 line-height: 40/@base;
+                 font-size:24/@base;
+                 color:#000;
+            
+            }
+            .p2{
+                margin-top:30/@base;
+                font-size:20/@base;
+                color:red;
+            }
+            .p3{
+                margin-top:30/@base;
+                
+                 
+            }
+        }
+    }
+}
